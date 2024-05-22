@@ -5,6 +5,8 @@
   </p>
 <%= image_tag post.video.preview(resize_to_limit: [100, 100]).processed.url %>
 
+  <%= image_tag post.video.preview(resize_to_limit: [100, 100]).processed.url %>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Description:</strong>
     <%= post.description %>
