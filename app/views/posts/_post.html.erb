@@ -3,6 +3,7 @@
     <strong class="block font-medium mb-1">Video:</strong>
     <%= link_to post.video.filename, post.video if post.video.attached? %>
   </p>
+<%= image_tag post.video.preview(resize_to_limit: [100, 100]).processed.url %>
 
   <%= image_tag post.video.preview(resize_to_limit: [100, 100]).processed.url %>
 
@@ -11,8 +12,11 @@
     <%= post.description %>
   </p>
 
+
+
   <p class="my-5">
-    posted by <%= post.user.email %>
+    posted by: <%= post.user.email %>
   </p>
+
 
 </div>
