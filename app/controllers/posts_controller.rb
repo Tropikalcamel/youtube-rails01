@@ -20,6 +20,13 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def video_previewable?(post)
+    post.video.previewable?
+  end
+  helper_method :video_previewable?
+
+  # ...
+
   # POST /posts or /posts.json
   def create
     @post = current_user.posts.new(post_params)
